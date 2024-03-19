@@ -1,0 +1,20 @@
+<!-- Food -->
+<section class="section section--food">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <h2 class="section__title">Категория блюд</h2>
+            <p class="section__text">
+                Добро пожаловать в мир изысканных и неповоторимых вкусов грузинской кухни!
+            </p>
+        </div>
+        <div class="section__content">
+            <div class="food">
+                <div class="food__inner">
+                    <ul class="food__list">
+                        @@loop('items/food.html', 'data/food/food-01.json')
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

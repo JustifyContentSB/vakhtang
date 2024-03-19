@@ -1,23 +1,23 @@
-@use 'sass:math';
+@use "sass:math";
 
 @mixin font-face($name, $path, $weight: 400, $style: normal, $exts: eot woff2 woff ttf svg) {
     $src: null;
 
     $extmods: (
-        eot: '?',
-        svg: '##{str-replace($name, ' ', '_')}'
+        eot: "?",
+        svg: "##{str-replace($name, "", "_")}",
     );
 
     $formats: (
-        otf: 'opentype',
-        ttf: 'truetype'
+        otf: "opentype",
+        ttf: "truetype",
     );
 
     /* stylelint-disable */
     @each $ext in $exts {
         $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-        $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
     }
 
     @font-face {
@@ -106,7 +106,7 @@
         line-height: 0;
         display: table;
         clear: both;
-        content: '';
+        content: "";
     }
 }
 
@@ -137,7 +137,7 @@
     $directions: top, right, bottom, left;
 
     & {
-        content: '';
+        content: "";
         display: inline-block;
         width: 0;
         height: 0;
@@ -172,7 +172,7 @@
     /* stylelint-enable */
 
     & {
-        content: '';
+        content: "";
         display: inline-block;
         width: $size;
         height: $size;
@@ -200,13 +200,23 @@
 
 @mixin autofill() {
     &:-webkit-autofill {
-        &, &:hover, &:focus, &:active {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
             @content;
         }
     }
 }
 
-@mixin shadow($color: $shadow-color, $depth: $shadow-depth, $x: $shadow-x, $y: $shadow-y, $blur: $shadow-blur, $spread: $shadow-spread) {
+@mixin shadow(
+    $color: $shadow-color,
+    $depth: $shadow-depth,
+    $x: $shadow-x,
+    $y: $shadow-y,
+    $blur: $shadow-blur,
+    $spread: $shadow-spread
+) {
     box-shadow: $x $y $blur $spread #{rgba($color, $depth)};
 }
 
@@ -253,6 +263,8 @@
 
 @mixin img-contain($fit: contain) {
     position: relative;
+    border-radius: $radius;
+    overflow: hidden;
 
     img {
         object-fit: $fit;
@@ -268,7 +280,10 @@
     }
 }
 
-@mixin img-cover($fit: cover) {
+@mixin img-cover($fit: cover, $padding) {
+    padding-bottom: $padding;
+    display: block;
+
     @include img-contain($fit) {
         @content;
     }
@@ -318,7 +333,9 @@
 }
 
 @mixin hover() {
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         @content;
     }
 }
@@ -345,4 +362,11 @@
     @supports (-ms-ime-align: auto) {
         @content;
     }
+}
+
+@mixin line-clamp($lines: 2) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
 }

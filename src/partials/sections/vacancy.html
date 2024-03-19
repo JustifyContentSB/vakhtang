@@ -1,0 +1,96 @@
+<!-- Vacancy -->
+<section class="section section--vacancy">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <h2 class="section__title">Стань частью нашей команды!</h2>
+            <p class="section__text">Рестораны Вахтанг продолжают расти в Москве и других городах и в нашу большую команду, а точнее дружную семью нужны профессионалы и люди желающие развивать культуру грузинского гостеприимства. </p>
+        </div>
+        <div class="section__content">
+            <div class="vacancy">
+                <div class="vacancy__inner">
+                    <ul class="vacancy__features">
+                        @@loop('items/vacancy.html', 'data/vacancy.json')
+                    </ul>
+                    <form class="form" action="#">
+                        <div class="form__inner">
+                            <div class="form__top">
+                                <h3 class="form__title">Заполни небольшую анкету, и мы обязательно свяжемся</h3>
+                            </div>
+                            <div class="form__content">
+                                <div class="form__main">
+                                    <label class="form__label">
+                                        <span class="form__type">Как вас зовут? *</span>
+                                        <input type="text" placeholder="Василий Иванович">
+                                    </label>
+                                    <div class="form__inputs">
+                                        <label class="form__label">
+                                            <span class="form__type">Гражданство</span>
+                                            <input type="text" placeholder="Россия">
+                                        </label>
+                                        <label class="form__label">
+                                            <span class="form__type">Возраст</span>
+                                            <input type="text" placeholder="45">
+                                        </label>
+                                    </div>
+                                    <div class="form__inputs">
+                                        <label class="form__label">
+                                            <span class="form__type">Город</span>
+                                            <input type="text" placeholder="Москва">
+                                        </label>
+                                        <label class="form__label">
+                                            <span class="form__type">Телефон для связи *</span>
+                                            <input type="text" placeholder="+7 923 45 45 34">
+                                        </label>
+                                    </div>
+                                    <div class="form__selects">
+                                        <div class="selects">
+                                            <div class="selects__list">
+                                                <div class="selects__item selects">
+                                                    <div class="select__content">
+                                                        <select name="month" id="month" data-select>
+                                                            <option value="month-1" selected>Июнь</option>
+                                                            <option value="month-2">Июль</option>
+                                                            <option value="month-3">Август</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="form__label">
+                                        <span class="form__type">Выберите вакансию из списка *</span>
+                                        <input type="text" placeholder="Повар-кондитер">
+                                    </label>
+                                </div>
+                                <div class="form__bottom">
+                                    <div class="form__agree">
+                                        <label class="form__agree-label">
+                                            <input class="form__agree-input" type="checkbox">
+                                            <span class="form__agree-checkbox"></span>
+                                            <span class="form__agree-text">Есть опыт работы на аналогичных должностях</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form__file">
+                                        <label class="form__file-label">
+                                            <input type="file">
+                                            <span class="form__file-title">Прикрепить резюме</span>
+                                            <span class="form__file-types">.doc, .pdf, .ppt, .docx, .pptx, .rtf до 10 мб</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__submit">
+                                        <button class="btn">Отправить запрос</button>
+                                    </div>
+                                    <p class="form__text">Отправляя сообщение, вы принимаете условия <a href="#">соглашения об использовании сайта</a>, <br> в том числе в части обработки и использования персональных данных</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="vacancy__contacts">
+                        @@include('components/contacts.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

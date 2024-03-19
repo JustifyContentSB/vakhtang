@@ -1,0 +1,21 @@
+{
+    "slidesPerView": 1,
+    "navigation": true,
+    "spaceBetween": 10,
+    "loop": false,
+    "autoplay": {
+        "delay": 2500
+    },
+    "breakpoints": {
+        "0": {
+            "slidesPerView": 1
+        },
+            "576": {
+            "slidesPerView": 2
+        },
+            "1365": {
+            "slidesPerView": 3,
+            "spaceBetween": 40
+        }
+    }
+}

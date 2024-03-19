@@ -10,12 +10,31 @@
 @import "btn";
 @import "form";
 @import "preloader";
-@import "header";
-@import "footer";
+
 @import "main";
 @import "modal";
 @import "select";
 @import "section";
 @import "wysiwyg";
 
+// Components
+@import "libs";
+@import "elements";
+@import "wrapper";
+@import "contacts";
+
 // Sections
+@import "header";
+@import "footer";
+@import "hero";
+@import "slider";
+@import "features";
+@import "cooperation";
+@import "food";
+@import "space";
+@import "kitchen";
+@import "vacancy";
+@import "franchise";
+@import "room";
+@import "request";
+@import "map";

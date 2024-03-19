@@ -31,6 +31,62 @@
     }
 }
 
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/sourceserifpro/SourceSerifPro-Light.eot");
+    src:
+        url("../fonts/sourceserifpro/SourceSerifPro-Light.eot") format("embedded-opentype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Light.ttf") format("truetype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Light.woff") format("woff"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Light.woff2") format("woff2"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Light.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/sourceserifpro/SourceSerifPro-Regular.eot");
+    src:
+        url("../fonts/sourceserifpro/SourceSerifPro-Regular.eot") format("embedded-opentype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Regular.ttf") format("truetype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Regular.woff") format("woff"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Regular.woff2") format("woff2"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Regular.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/sourceserifpro/SourceSerifPro-Semibold.eot");
+    src:
+        url("../fonts/sourceserifpro/SourceSerifPro-Semibold.eot") format("embedded-opentype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Semibold.ttf") format("truetype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Semibold.woff") format("woff"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Semibold.woff2") format("woff2"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Semibold.svg") format("svg");
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/sourceserifpro/SourceSerifPro-Bold.eot");
+    src:
+        url("../fonts/sourceserifpro/SourceSerifPro-Bold.eot") format("embedded-opentype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Bold.ttf") format("truetype"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Bold.woff") format("woff"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Bold.woff2") format("woff2"),
+        url("../fonts/sourceserifpro/SourceSerifPro-Bold.svg") format("svg");
+}
+
 *,
 *:after,
 *:before {
@@ -59,7 +115,11 @@ html {
 
 body {
     font: #{$font-size}/#{$line-height} $font-family;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
     color: $text;
+
     background: $body-background;
 
     &:before {

@@ -1,8 +1,12 @@
 @use "sass:math";
 
-@mixin margin-fix() {
-    & > *:last-child {
-        margin-bottom: 0;
+@mixin margin-bottom($margin) {
+    & > * {
+        margin-bottom: $margin;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

@@ -1,0 +1,51 @@
+[
+    {
+        "id": "13",
+        "img": "images/food/food-13.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "14",
+        "img": "images/food/food-14.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "15",
+        "img": "images/food/food-15.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "16",
+        "img": "images/food/food-16.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "17",
+        "img": "images/food/food-17.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "18",
+        "img": "images/food/food-18.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "19",
+        "img": "images/food/food-19.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    },{
+        "id": "20",
+        "img": "images/food/food-20.jpg",
+        "title": "Название",
+        "text": "Avocados with crab meat, red onion, crab salad stuffed bell pepper, with crab meat, red onion,",
+        "price": "949"
+    }
+]

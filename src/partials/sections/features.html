@@ -1,0 +1,17 @@
+<!-- Features -->
+<section class="section section--features">
+    <div class="section__header visually-hidden">
+        <h2 class="section__title visually-hidden">О нас</h2>
+    </div>
+    <div class="section__wrapper">
+        <div class="section__content">
+            <div class="features">
+                <div class="features__inner container">
+                    <ul class="features__list">
+                        @@loop('items/features.html', '/data/features.json')
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

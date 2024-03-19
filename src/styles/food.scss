@@ -1,0 +1,51 @@
+@import "partials";
+
+.food {
+    &__list {
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__img {
+        width: 100%;
+
+        @include img-cover(cover, 110%);
+    }
+
+    &__info {
+        padding-top: 24px;
+        color: $accent;
+        text-align: center;
+        letter-spacing: $letter-spacing;
+
+        @include margin-bottom(16px);
+    }
+
+    &__title,
+    &__prices {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 100%;
+        color: $title-color;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 130%;
+
+        @include line-clamp(3);
+    }
+}
+
+.section {
+    &--food {
+        padding-bottom: 50px;
+
+        .section {
+            &__header {
+                margin-bottom: 38px;
+            }
+        }
+    }
+}

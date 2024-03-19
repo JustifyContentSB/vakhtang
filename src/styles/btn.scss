@@ -5,12 +5,23 @@
 .btn {
     display: inline-block;
 
-    padding: $input-padding;
+    padding: 18px 55px;
 
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
     color: $white;
+    color: #e5d4ba;
+    text-align: center;
+    letter-spacing: $letter-spacing;
 
     background-color: $primary;
-    border-radius: $input-radius;
+    border: none;
+    border-radius: 3px;
+
+    &--secondary {
+        background-color: $blue;
+    }
 
     @include transition(background-color);
 

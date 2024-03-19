@@ -1,0 +1,54 @@
+@import "partials";
+
+.franchise {
+    &__item {
+        display: flex;
+        margin-bottom: 46px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        position: relative;
+        overflow: hidden;
+        flex-basis: 522px;
+        flex-shrink: 0;
+
+        @include img-cover(cover, 36.5%);
+    }
+
+    &__info {
+        padding: 0 42px;
+        letter-spacing: $letter-spacing;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 120%;
+        color: $title-color;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 130%;
+        color: $accent;
+
+        @include margin-bottom(24px);
+    }
+}
+
+.section {
+    &--franchise {
+        padding: 50px 0;
+
+        .container {
+            max-width: 1030px;
+        }
+    }
+}

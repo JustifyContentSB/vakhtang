@@ -1,0 +1,61 @@
+@import "partials";
+
+.cooperation {
+    &__inner {
+        display: flex;
+
+        & > * {
+            width: 50%;
+        }
+    }
+
+    &__info {
+        margin-right: 70px;
+        padding-right: 10px;
+
+        @include margin-bottom(28px);
+
+        & > * {
+            letter-spacing: $letter-spacing;
+        }
+    }
+
+    &__title {
+        font-size: 33px;
+        font-weight: 400;
+        line-height: 120%;
+        color: $title-color;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        line-height: 140%;
+        color: $accent;
+    }
+
+    &__welcome {
+        font-weight: 400;
+        line-height: 140%;
+        color: $accent;
+    }
+
+    &__contacts {
+        margin-bottom: 30px;
+
+        @include margin-bottom(23px);
+    }
+
+    &__img {
+        @include img-cover(cover, initial);
+    }
+}
+
+.section {
+    &--cooperation {
+        .section {
+            &__wrapper {
+                max-width: 1430px;
+            }
+        }
+    }
+}

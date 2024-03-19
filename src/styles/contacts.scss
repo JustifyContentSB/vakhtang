@@ -1,0 +1,11 @@
+@import "partials";
+
+.contacts {
+    text-align: center;
+
+    @include margin-bottom(80px);
+
+    &__main {
+        @include margin-bottom(23px);
+    }
+}

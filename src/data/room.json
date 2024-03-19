@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "icon": "images/room/room-01.svg",
+        "text": "Площадь от 15 до 200 кв.м.",
+        "info": "(в зависимости от формата заведения)"
+    },
+    {
+        "id": 2,
+        "icon": "images/room/room-02.svg",
+        "text": "Наличие вентиляции"
+    },
+    {
+        "id": 3,
+        "icon": "images/room/room-03.svg",
+        "text": "Наличие воды и канализации"
+    },
+    {
+        "id": 4,
+        "icon": "images/room/room-04.svg",
+        "text": "Электричество от 20 кВт"
+    }
+]

@@ -1,5 +1,8 @@
 import Component from './component';
-
+
+// eslint-disable-next-line
+import { triggerNative } from '../utils/event';
+
 import { id as randomId } from '@/utils/random';
 
 const title = 'Select';
@@ -83,7 +86,7 @@ export default class extends Component {
 
         $(el)
             .find('option')
-            .each(function() {
+            .each(function () {
                 const title = $(this).text();
                 const value = $(this).val();
                 const selected = $(this).is('option:selected');
@@ -165,7 +168,7 @@ export default class extends Component {
         const id = $element.attr(attrs.id);
         const checked = [];
 
-        $dropdown.find(`[${attrs.checkbox}]:checked`).each(function() {
+        $dropdown.find(`[${attrs.checkbox}]:checked`).each(function () {
             const value = $(this).val();
 
             checked.push(value);
@@ -339,7 +342,7 @@ export default class extends Component {
             const updatedTitle = titles.length === 1 ? titles[0] : titles.join(', ');
             const updatedValue = values.length === 1 ? values[0] : values;
 
-            $dropdown.find(`[${attrs.item}]`).each(function() {
+            $dropdown.find(`[${attrs.item}]`).each(function () {
                 const value = multiple ? $(this).find(`[${attrs.checkbox}]`).val() : $(this).attr(attrs.value);
 
                 if (options.includes(value)) {
@@ -372,11 +375,7 @@ export default class extends Component {
             return;
         }
 
-        const {
-            getElements,
-            getDefaults,
-            renderItems,
-        } = this;
+        const { getElements, getDefaults, renderItems } = this;
 
         const { $element, $dropdown, $input } = getElements(el);
 
@@ -388,7 +387,7 @@ export default class extends Component {
 
             const attrs = ['selected', 'disabled', 'hidden'].reduce(
                 (acc, attr) => acc + (option[attr] ? ` ${attr}` : ''),
-                '',
+                ''
             );
 
             $element.append(`<option${attrs} value="${value}">${title}</option>`);
@@ -399,6 +398,5 @@ export default class extends Component {
         $input.text(title);
 
         renderItems.call(this, el, options);
-
     };
 }

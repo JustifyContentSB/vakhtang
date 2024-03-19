@@ -1,5 +1,8 @@
-$icomoon-prefix: '';
-$icomoon-font-name: '';
-$icomoon-font-family: '';
+$icomoon-prefix: 'icon-';
+$icomoon-font-name: 'icomoon';
+$icomoon-font-family: 'icomoon';
 
-$icomoon-icons: ();
+$icomoon-icons: (
+	arrow-left: '\e900',
+	arrow-right: '\e901'
+);

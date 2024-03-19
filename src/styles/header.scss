@@ -1,1 +1,156 @@
 @import "partials";
+
+.header {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    overflow-y: auto;
+
+    width: 320px;
+    min-width: 320px;
+
+    color: $gold;
+
+    background: #191d26;
+
+    a {
+        @include hover() {
+            color: $white;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gold;
+        border-radius: 5px;
+    }
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__inner {
+        position: relative;
+        min-height: 100%;
+        padding: 60px 40px;
+
+        @include margin-bottom(60px);
+
+        &::before,
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            width: 18px;
+
+            opacity: 0.2;
+        }
+
+        &::before {
+            left: 0;
+            background: url("../images/icons/header-left.png") repeat center / contain;
+        }
+
+        &::after {
+            right: 0;
+            background: url("../images/icons/header-right.png") repeat center / contain;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 178px;
+        margin: 0 auto;
+    }
+
+    &__menu {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing;
+
+        &-item {
+            margin-bottom: 28px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-link {
+            color: inherit;
+
+            &.is-active {
+                color: $white;
+            }
+        }
+    }
+
+    &__contacts {
+        margin-bottom: 40px;
+
+        @include margin-bottom(8px);
+    }
+
+    &__phone {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+
+        &-link {
+            color: inherit;
+        }
+    }
+
+    &__time {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        @include margin-bottom(0);
+    }
+
+    &__email {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $white;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        &-link {
+            color: inherit;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

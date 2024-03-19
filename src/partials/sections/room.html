@@ -1,0 +1,22 @@
+<!-- Room -->
+<section class="section section--room">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <div class="section__text section__text--top">
+                <p>Мы находимся в стадии активного развития и расширения своей сети ресторанов. <br>
+                    В связи с этим, мы заинтересованы в поиске новых помещений для открытия ресторанов в различных локациях, включая жилые массивы, фуд-корты торгово-развлекательных центров и фудхоллы. </p>
+                <p>Приглашаем арендодателей к сотрудничеству и готовы обсудить возможности аренды ваших коммерческих площадей для реализации наших проектов.</p>
+            </div>
+            <h2 class="section__title">Требования к помещениям:</h2>
+        </div>
+        <div class="section__content">
+            <div class="room">
+                <div class="room__inner">
+                    <ul class="room__list">
+                        @@loop('items/room.html', 'data/room.json')
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,1 +1,86 @@
 @import "partials";
+
+.section {
+    padding: 25px 0;
+
+    &--dark {
+        background: $accent;
+    }
+
+    &__header {
+        margin-bottom: 32px;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+
+        & > * {
+            letter-spacing: $letter-spacing;
+        }
+
+        @include margin-bottom(32px);
+
+        &--secondary {
+            @include margin-bottom(14px);
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        padding-top: 40px;
+
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 120%;
+        color: $title-color;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 261px;
+            height: 13px;
+
+            background: url("../images/icons/decor-line.png") no-repeat center / contain;
+        }
+    }
+
+    &__georgian {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 100%;
+        color: #b59860;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+
+        @include margin-bottom(20px);
+
+        &--small {
+            max-width: 692px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #6d6d6d;
+        }
+
+        &--top {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,40 @@
+@import "partials";
+
+.swiper {
+    &-pagination {
+        display: none;
+    }
+
+    &-control {
+        cursor: pointer;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 60px;
+        height: 60px;
+
+        color: $blue;
+
+        border: 1px solid $blue;
+        border-radius: 50%;
+
+        @include icomoon(arrow-left, after) {
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        &--next {
+            @include icomoon(arrow-right, after) {
+                display: inline-block;
+                font-size: 14px;
+            }
+        }
+
+        @include hover() {
+            color: $white;
+            background: $blue;
+        }
+    }
+}

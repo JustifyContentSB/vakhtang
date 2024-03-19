@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "img": "images/kitchen/kitchen-01.jpg",
+        "img-title": "фотографии наших поваров"
+    },
+    {
+        "id": 2,
+        "img": "images/kitchen/kitchen-02.jpg",
+        "img-title": "фотографии наших поваров"
+    }
+]

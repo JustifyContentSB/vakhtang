@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs, Manipulation, Scrollbar } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs, Manipulation, Scrollbar, Autoplay } from 'swiper/modules';
 
 import Component from './component';
 import LazyLoad from './lazyLoad';
@@ -206,7 +206,7 @@ export default class extends Component {
 
         params.navigation = navigation;
 
-        params.modules = [Navigation, Pagination, Manipulation, Scrollbar];
+        params.modules = [Navigation, Pagination, Manipulation, Scrollbar, Autoplay];
 
         if (thumbsId) {
             params.modules.push(Thumbs);

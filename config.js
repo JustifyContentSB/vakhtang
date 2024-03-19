@@ -1,6 +1,6 @@
 module.exports = {
     title: 'ВАХТАНГ',
-    description: 'Домашняя грузинская кухня \'ВАХТАНГ\'',
+    description: "Домашняя грузинская кухня 'ВАХТАНГ'",
     authors: [
         {
             name: 'Rakhib Salekhli',
@@ -8,25 +8,21 @@ module.exports = {
             contacts: [
                 {
                     title: '@rxbweb',
-                    href: 'https://t.me/rxbweb'
+                    href: 'https://t.me/rxbweb',
                 },
                 {
                     title: 'rxpro700@gmail.com',
-                    href: 'mailto:rxpro700@gmail.com'
+                    href: 'mailto:rxpro700@gmail.com',
                 },
-                {
-                    title: 'johndoe.com',
-                    href: 'https://johndoe.com/'
-                }
-            ]
-        }
+            ],
+        },
     ],
     presets: {
         dev: {
             debug: true,
             sourcemaps: {
-                js: true
-            }
-        }
-    }
+                js: true,
+            },
+        },
+    },
 };

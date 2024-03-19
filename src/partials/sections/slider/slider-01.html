@@ -1,0 +1,25 @@
+<!-- Slider -->
+<section class="section section--slider">
+    <div class="section__wrapper container">
+        <div class="section__header visually-hidden">
+            <h2 class="section__title visually-hidden">Наше меню</h2>
+        </div>
+        <div class="section__content">
+            <div class="slider">
+                <div class="slider__inner">
+                    <div class="slider__main">
+                        <div class="slider__content">
+                            @@include('components/swiper.html', {
+                                "id": "slider/slider-01",
+                                "template": "slider/slider-01"
+                            })
+                        </div>
+                        <div class="slider__bottom">
+                            <a class="slider__btn btn" href="#">Посмотреть наше меню</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

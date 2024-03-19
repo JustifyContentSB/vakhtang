@@ -1,0 +1,17 @@
+@import "partials";
+
+.request {
+    &__inner {
+        @include margin-bottom(32px);
+    }
+}
+
+.section {
+    &--request {
+        padding: 50px 0;
+
+        .container {
+            max-width: 1030px;
+        }
+    }
+}

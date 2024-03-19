@@ -1,1 +1,52 @@
 @import "partials";
+
+.footer {
+    padding-top: 0;
+    color: $white;
+    background: $accent;
+
+    &__inner {
+        padding-top: 127px;
+        padding-bottom: 60px;
+        line-height: 140%;
+        text-align: center;
+
+        @include margin-bottom(30px);
+    }
+
+    &__top > *,
+    &__middle > *,
+    &__bottom > * {
+        @include margin-bottom(20px);
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 100%;
+        color: #b59860;
+    }
+
+    &__lead {
+        font-size: 21px;
+        line-height: 140%;
+    }
+
+    &__logo {
+        display: block;
+        width: 175px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__copyright {
+        font-size: 13px;
+        line-height: 140%;
+    }
+
+    &__title,
+    &__lead,
+    &__copyright {
+        letter-spacing: $letter-spacing;
+    }
+}

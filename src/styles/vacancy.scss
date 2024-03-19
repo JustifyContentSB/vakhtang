@@ -1,0 +1,40 @@
+@import "partials";
+
+.vacancy {
+    &__inner {
+        @include margin-bottom(32px);
+    }
+
+    &__features {
+        font-weight: 400;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: $letter-spacing;
+
+        & > li {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+                padding-bottom: 13px;
+
+                &::after {
+                    content: "";
+
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    display: inline-block;
+
+                    width: 8px;
+                    height: 8px;
+
+                    background: $gold;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import "partials";
+
+.map {
+    &__inner {
+        &--secondary {
+            display: flex;
+
+            .map {
+                &__content {
+                    margin: 0;
+                    margin-right: 24px;
+                }
+
+                &__list {
+                    grid-template-columns: 1fr;
+                    flex-basis: 352px;
+                    background: $section-bg;
+                }
+            }
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-bottom: 24px;
+        border-radius: $radius;
+    }
+
+    &__list {
+        display: grid;
+        grid-gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        flex-shrink: 0;
+    }
+
+    &__item {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 32px 20px;
+
+        text-align: center;
+        letter-spacing: $letter-spacing;
+
+        background: $section-bg;
+        border-radius: $radius;
+
+        @include margin-bottom(10px);
+    }
+
+    &__place {
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    &__address {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 130%;
+        color: $accent;
+    }
+
+    &__show {
+        margin-bottom: 24px;
+        padding: 0;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        color: $accent;
+        text-decoration: underline;
+
+        background: transparent;
+        border: none;
+    }
+
+    &__phone {
+        font-size: 21px;
+    }
+}
+
+.section {
+    &--map {
+        padding: 50px 0;
+
+        .container {
+            max-width: 1150px;
+        }
+    }
+}

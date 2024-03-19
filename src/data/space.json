@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "img": "images/space/space-01.jpg",
+        "name": "Корнер на фуд-корте",
+        "square": "15 - 40 кв.м."
+    },
+    {
+        "id": 2,
+        "img": "images/space/space-02.jpg",
+        "name": "Кафе в ЖК",
+        "square": "50 - 200 кв.м."
+    },
+    {
+        "id": 3,
+        "img": "images/space/space-03.jpg",
+        "name": "Дарк Китчен",
+        "square": "30 - 50 кв.м."
+    }
+]

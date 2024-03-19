@@ -1,6 +1,164 @@
 @import "partials";
 
 .form {
+    padding: 46px;
+    color: $accent;
+    background: $section-bg;
+    border-radius: $radius;
+
+    &__inner,
+    &__content,
+    &__bottom {
+        @include margin-bottom(42px);
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 726px;
+        margin: 0 auto;
+    }
+
+    &__main {
+        @include margin-bottom(36px);
+    }
+
+    &__inputs {
+        display: grid;
+        grid-gap: 36px 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: $letter-spacing;
+    }
+
+    &__type {
+        display: inline-block;
+
+        margin-bottom: 12px;
+
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: $letter-spacing;
+    }
+
+    &__label {
+        display: block;
+        width: 100%;
+    }
+
+    &__agree {
+        display: flex;
+        justify-content: center;
+
+        &-label {
+            cursor: pointer;
+            display: inline-flex;
+            line-height: 100%;
+            letter-spacing: $letter-spacing;
+        }
+
+        &-checkbox {
+            position: relative;
+
+            display: inline-block;
+
+            width: 22px;
+            height: 22px;
+            margin-right: 16px;
+
+            background: $white;
+            border: 1px solid $input-border;
+            border-radius: 50%;
+
+            &::after {
+                content: "";
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 13px;
+                height: 13px;
+
+                opacity: 0;
+                background: $input-border;
+                border-radius: 50%;
+            }
+        }
+
+        &-text {
+            padding: 4px 0;
+        }
+
+        &-input {
+            display: block;
+
+            &:checked ~ .form__agree-checkbox::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        &-label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-title {
+            margin-bottom: 10px;
+
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 130%;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing;
+        }
+
+        &-types {
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: $letter-spacing;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: $letter-spacing;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__textarea {
+        min-height: 175px;
+    }
+
     input,
     textarea,
     button {
@@ -25,12 +183,9 @@
     input[type="password"],
     textarea {
         display: block;
-
         width: 100%;
         padding: $input-padding;
-
         border: 1px solid $input-border;
-        border-radius: $input-radius;
 
         @include transition(border-color);
 
@@ -46,15 +201,19 @@
         &:not(:-webkit-autofill) {
             animation-name: onAutoFillCancel;
         }
+
+        &::placeholder {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 150%;
+            color: $blue;
+            letter-spacing: $letter-spacing;
+        }
     }
 
     input[type="file"] {
         display: none;
         visibility: hidden;
-    }
-
-    button {
-        border: 0;
     }
 
     select {
@@ -68,15 +227,5 @@
         &::-ms-expand {
             display: none;
         }
-    }
-
-    label {
-        display: block;
-        margin-bottom: 7px;
-        font-size: 90%;
-    }
-
-    &__control {
-        margin-bottom: 12px;
     }
 }

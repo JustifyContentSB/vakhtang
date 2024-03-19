@@ -1,0 +1,23 @@
+<!-- Map -->
+<section class="section section--map">
+    <div class="section__wrapper container">
+        <div class="section__header">
+            <div class="section__text section__text--top">
+                <p>Мы стараемся выбирать удобные и привлекательные места для наших заведений, чтобы каждый мог насладиться вкусом нашей кухни в уютной атмосфере. Приходите к нам и откройте для себя новые гастрономические впечатления!</p>
+            </div>
+            <h2 class="section__title">Москва</h2>
+        </div>
+        <div class="section__content">
+            <div class="map">
+                <div class="map__inner">
+                    <div class="map__content">
+                        <img src="images/map/map-01.jpg" alt="карта">
+                    </div>
+                    <ul class="map__list">
+                        @@loop('items/map.html', 'data/map/map-01.json')
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

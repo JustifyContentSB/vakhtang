@@ -1,0 +1,45 @@
+@import "partials";
+
+.space {
+    &__list {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 100%;
+        max-width: 1076px;
+        margin: 0 auto;
+    }
+
+    &__img {
+        width: 100%;
+
+        @include img-cover(cover, 100%);
+    }
+
+    &__info {
+        padding-top: 24px;
+        text-align: center;
+        letter-spacing: $letter-spacing;
+
+        @include margin-bottom(8px);
+    }
+
+    &__name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 120%;
+        color: $title-color;
+    }
+
+    &__square {
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+.section {
+    &--space {
+        padding-bottom: 50px;
+    }
+}
