@@ -1,0 +1,60 @@
+@import "partials";
+
+.burger {
+    &__icon {
+        cursor: pointer;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        transition: transform 300ms;
+
+        -webkit-tap-highlight-color: transparent;
+
+        .is-active & {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__line {
+        fill: none;
+        stroke: $gold;
+        stroke-linecap: round;
+        stroke-width: 5.5;
+
+        transition:
+            stroke-dasharray 300ms,
+            stroke-dashoffset 300ms;
+
+        &--top {
+            stroke-dasharray: 40 80;
+
+            .is-active & {
+                stroke-dashoffset: -64px;
+            }
+        }
+
+        &--middle {
+            transform-origin: 50%;
+            stroke-dasharray: 40 142;
+            transition: transform 300ms;
+
+            .is-active & {
+                transform: rotate(90deg);
+            }
+        }
+
+        &--bottom {
+            transform-origin: 50%;
+            stroke-dasharray: 40 85;
+            transition:
+                transform 300ms,
+                stroke-dashoffset 300ms;
+
+            .is-active & {
+                stroke-dashoffset: -64px;
+            }
+        }
+    }
+}

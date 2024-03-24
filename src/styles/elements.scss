@@ -33,7 +33,8 @@
     }
 }
 
-.decor {
+.decor-top,
+.decor-bottom {
     position: relative;
 
     &::after {
@@ -47,7 +48,15 @@
 
         height: 45px;
 
+        opacity: 0.2;
         background: url("../images/icons/decor-img.svg") repeat center / contain;
+    }
+}
+
+.decor-top {
+    &::after {
+        top: 34px;
+        bottom: auto;
     }
 }
 
@@ -76,4 +85,68 @@
     color: $accent;
     text-decoration: underline;
     letter-spacing: $letter-spacing;
+}
+
+@include ms(xl) {
+    .phone {
+        font-size: 32px;
+    }
+}
+
+@include ms(md) {
+    .phone {
+        font-size: 28px;
+    }
+}
+
+@include ms(sm) {
+    .phone {
+        font-size: 24px;
+    }
+
+    .time {
+        font-size: 12px;
+    }
+
+    .email {
+        font-size: 14px;
+    }
+
+    .decor-top {
+        &::after {
+            top: 0;
+        }
+    }
+
+    .decor-bottom {
+        &::after {
+            bottom: 0;
+        }
+    }
+
+    .wave-bottom {
+        &::before {
+            bottom: -2px;
+            height: 45px;
+            background: url("../images/icons/wave-bottom-mob.png") no-repeat center / cover;
+        }
+    }
+
+    .wave-top {
+        &::before {
+            top: -2px;
+            height: 12px;
+            background: url("../images/icons/wave-top-mob.png") no-repeat center / cover;
+        }
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .wave-bottom {
+        &::before {
+            bottom: -2px;
+            height: 68px;
+            background: url("../images/icons/wave-bottom-large.png") no-repeat center / cover;
+        }
+    }
 }

@@ -1,8 +1,13 @@
 @import "partials";
 
 .form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 46px;
+
     color: $accent;
+
     background: $section-bg;
     border-radius: $radius;
 
@@ -68,6 +73,7 @@
             display: inline-block;
 
             width: 22px;
+            min-width: 22px;
             height: 22px;
             margin-right: 16px;
 
@@ -183,8 +189,12 @@
     input[type="password"],
     textarea {
         display: block;
+
         width: 100%;
         padding: $input-padding;
+
+        font-size: 18px;
+
         border: 1px solid $input-border;
 
         @include transition(border-color);
@@ -226,6 +236,91 @@
 
         &::-ms-expand {
             display: none;
+        }
+    }
+
+    @include ms(md) {
+        padding: 24px 16px;
+
+        &__inner,
+        &__content,
+        &__bottom {
+            @include margin-bottom(22px);
+        }
+
+        &__main {
+            @include margin-bottom(24px);
+        }
+
+        &__title {
+            font-size: 20px;
+        }
+
+        &__type {
+            font-size: 14px;
+        }
+
+        &__inputs {
+            grid-gap: 24px;
+            grid-template-columns: 1fr;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        input[type="password"],
+        textarea {
+            padding: 9px 16px;
+            font-size: 14px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+
+        &__agree {
+            justify-content: flex-start;
+
+            &-text {
+                font-size: 11px;
+                font-weight: 400;
+            }
+
+            &-checkbox {
+                width: 19px;
+                min-width: 19px;
+                height: 19px;
+            }
+        }
+
+        &__file {
+            &-title {
+                font-size: 13px;
+            }
+
+            &-types {
+                font-size: 12px;
+            }
+        }
+
+        &__text {
+            font-size: 9px;
+        }
+    }
+
+    @include ms(sm) {
+        &__title {
+            font-size: 16px;
+        }
+
+        &__type {
+            font-size: 12px;
+        }
+
+        &__textarea {
+            min-height: 150px;
         }
     }
 }

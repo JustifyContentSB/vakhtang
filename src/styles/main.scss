@@ -10,3 +10,10 @@
     flex-direction: column;
     min-height: 100%;
 }
+
+.container {
+    @include ms(md) {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}

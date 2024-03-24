@@ -36,6 +36,23 @@
         font-size: 14px;
         line-height: 140%;
     }
+
+    @include ms(lg) {
+        &__list {
+            grid-gap: 20px;
+        }
+    }
+
+    @include ms(md) {
+        &__list {
+            grid-gap: 40px;
+            grid-template-columns: 1fr;
+        }
+
+        &__info {
+            padding-top: 16px;
+        }
+    }
 }
 
 .section {

@@ -19,14 +19,20 @@
     border: none;
     border-radius: 3px;
 
-    &--secondary {
-        background-color: $blue;
-    }
-
-    @include transition(background-color);
+    @include transition(background-color, color);
 
     @include hover() {
         color: $white;
-        background-color: color.adjust($primary, $lightness: 2.5%);
+        background-color: $blue;
+    }
+
+    @include ms(xl) {
+        padding: 16px 46px;
+        font-size: 18px;
+    }
+
+    @include ms(sm) {
+        padding: 12px 40px;
+        font-size: 16px;
     }
 }

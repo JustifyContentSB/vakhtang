@@ -2,6 +2,7 @@
 
 .header {
     position: fixed;
+    z-index: 100;
     top: 0;
     bottom: 0;
     left: 0;
@@ -10,6 +11,7 @@
 
     width: 320px;
     min-width: 320px;
+    height: 100vh;
 
     color: $gold;
 
@@ -66,10 +68,22 @@
         }
     }
 
+    &__content {
+        @include margin-bottom(60px);
+    }
+
     &__logo {
         display: block;
         width: 178px;
         margin: 0 auto;
+
+        &-mob {
+            display: none;
+        }
+    }
+
+    &__burger {
+        display: none;
     }
 
     &__menu {
@@ -150,6 +164,117 @@
 
             &:last-child {
                 margin-right: 0;
+            }
+        }
+
+        a {
+            opacity: 0.5;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include ms(xl) {
+        right: 0;
+        bottom: auto;
+
+        overflow-y: visible;
+
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+
+        &__inner {
+            padding: 0;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: 0;
+            padding: 20px 10px 20px 30px;
+
+            background: $accent;
+        }
+
+        &__logo {
+            width: 115px;
+            margin: 0;
+        }
+
+        &__burger {
+            display: inline-block;
+        }
+
+        &__main {
+            position: relative;
+            overflow-y: auto;
+            height: 0;
+            transition: height 0.3s cubic-bezier(0, 1, 0, 1);
+
+            .is-active & {
+                height: calc(100vh - 94px);
+            }
+        }
+
+        &__content {
+            position: relative;
+            min-height: 100%;
+            padding: 32px 24px;
+
+            &::before,
+            &::after {
+                content: "";
+
+                position: absolute;
+                top: 0;
+                bottom: 0;
+
+                width: 18px;
+
+                opacity: 0.2;
+            }
+
+            &::before {
+                left: 0;
+                background: url("../images/icons/header-left.png") repeat center / contain;
+            }
+
+            &::after {
+                right: 0;
+                background: url("../images/icons/header-right.png") repeat center / contain;
+            }
+        }
+    }
+
+    @include ms(md) {
+        &__top {
+            padding: 5px 6px 5px 16px;
+        }
+
+        &__main {
+            .is-active & {
+                height: calc(100vh - 60px);
+            }
+        }
+
+        &__logo {
+            &-desktop {
+                display: none;
+            }
+
+            &-mob {
+                display: block;
             }
         }
     }

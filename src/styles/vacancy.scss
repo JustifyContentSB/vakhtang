@@ -37,4 +37,16 @@
             }
         }
     }
+
+    @include ms(md) {
+        &__features {
+            font-size: 14px;
+        }
+    }
+
+    @include ms(sm) {
+        &__features {
+            font-size: 12px;
+        }
+    }
 }

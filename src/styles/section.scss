@@ -7,6 +7,14 @@
         background: $accent;
     }
 
+    &__wrapper {
+        & > * {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__header {
         margin-bottom: 32px;
         font-size: 18px;
@@ -27,7 +35,7 @@
     &__title {
         position: relative;
 
-        padding-top: 40px;
+        padding-top: 34px;
 
         font-size: 32px;
         font-weight: 400;
@@ -43,8 +51,8 @@
             left: 50%;
             transform: translateX(-50%);
 
-            width: 261px;
-            height: 13px;
+            width: 161px;
+            height: 8px;
 
             background: url("../images/icons/decor-line.png") no-repeat center / contain;
         }
@@ -82,5 +90,65 @@
 
     &__img {
         margin-bottom: 24px;
+    }
+
+    @include ms(lg) {
+        padding: 16px 0;
+
+        .main &:last-child {
+            padding-bottom: 32px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 16px;
+
+            &--top {
+                margin-bottom: 60px;
+            }
+        }
+
+        &__georgian {
+            font-size: 24px;
+        }
+    }
+
+    @include ms(md) {
+        &__title {
+            font-size: 18px;
+        }
+
+        &__georgian {
+            font-size: 22px;
+        }
+
+        &__text {
+            font-size: 14px;
+
+            &--top {
+                margin-bottom: 32px;
+            }
+
+            @include margin-bottom(16px);
+        }
+    }
+
+    @include ms(sm) {
+        &__text {
+            &--top {
+                font-size: 12px;
+            }
+        }
+
+        &__img {
+            img {
+                display: block;
+                width: 237px;
+                margin: 0 auto;
+            }
+        }
     }
 }

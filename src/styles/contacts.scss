@@ -3,9 +3,31 @@
 .contacts {
     text-align: center;
 
-    @include margin-bottom(80px);
+    &__inner {
+        @include margin-bottom(80px);
+    }
 
     &__main {
         @include margin-bottom(23px);
+    }
+
+    @include ms(md) {
+        &__inner {
+            @include margin-bottom(40px);
+        }
+
+        &__main {
+            @include margin-bottom(16px);
+        }
+    }
+
+    @include ms(sm) {
+        &__inner {
+            @include margin-bottom(32px);
+        }
+
+        &__main {
+            @include margin-bottom(12px);
+        }
     }
 }

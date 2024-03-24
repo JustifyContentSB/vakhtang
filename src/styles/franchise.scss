@@ -41,6 +41,45 @@
 
         @include margin-bottom(24px);
     }
+
+    @include ms(lg) {
+        &__item {
+            margin-bottom: 32px;
+        }
+
+        &__img,
+        &__info {
+            flex-basis: 50%;
+        }
+
+        &__info {
+            padding: 0 30px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        &__text {
+            @include margin-bottom(16px);
+        }
+    }
+
+    @include ms(md) {
+        &__item {
+            display: block;
+        }
+
+        &__info {
+            padding: 0;
+            padding-top: 22px;
+        }
+
+        &__img {
+            padding-bottom: 70%;
+        }
+    }
 }
 
 .section {
@@ -48,7 +87,7 @@
         padding: 50px 0;
 
         .container {
-            max-width: 1030px;
+            max-width: 1060px;
         }
     }
 }

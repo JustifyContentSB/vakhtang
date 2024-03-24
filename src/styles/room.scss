@@ -51,6 +51,19 @@
         color: $accent;
         letter-spacing: $letter-spacing;
     }
+
+    @include ms(md) {
+        &__list {
+            grid-gap: 20px;
+        }
+    }
+
+    @include ms(sm) {
+        &__list {
+            grid-gap: 12px;
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 .section {

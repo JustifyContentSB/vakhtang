@@ -2,4 +2,13 @@
 
 .wrapper {
     padding-left: 320px;
+
+    @include ms(xl) {
+        padding-top: 95px;
+        padding-left: 0;
+    }
+
+    @include ms(md) {
+        padding-top: 58px;
+    }
 }

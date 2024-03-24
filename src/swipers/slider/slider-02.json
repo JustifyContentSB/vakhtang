@@ -8,12 +8,14 @@
     },
     "breakpoints": {
         "0": {
-            "slidesPerView": 1
+            "slidesPerView": "auto",
+            "spaceBetween": 10
         },
-            "576": {
-            "slidesPerView": 2
+        "576": {
+            "slidesPerView": 2,
+            "spaceBetween": 20
         },
-            "1365": {
+        "900": {
             "slidesPerView": 3,
             "spaceBetween": 40
         }

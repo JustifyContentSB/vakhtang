@@ -42,11 +42,70 @@
     &__copyright {
         font-size: 13px;
         line-height: 140%;
+
+        br {
+            display: none;
+        }
     }
 
     &__title,
     &__lead,
     &__copyright {
         letter-spacing: $letter-spacing;
+    }
+
+    @include ms(lg) {
+        &__inner {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__lead {
+            font-size: 17px;
+        }
+    }
+
+    @include ms(md) {
+        &__inner {
+            padding-top: 90px;
+            padding-bottom: 40px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__copyright {
+            font-size: 12px;
+        }
+    }
+
+    @include ms(sm) {
+        &__inner {
+            padding-top: 44px;
+            padding-bottom: 32px;
+
+            @include margin-bottom(24px);
+        }
+
+        &__title {
+            font-size: 19px;
+        }
+
+        &__logo {
+            width: 125px;
+        }
+
+        &__copyright {
+            font-size: 10px;
+
+            br {
+                display: inline;
+            }
+        }
     }
 }

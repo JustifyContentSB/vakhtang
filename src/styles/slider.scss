@@ -4,6 +4,10 @@
     color: $black;
 
     .swiper {
+        &-slide {
+            width: 240px;
+        }
+
         &-control {
             position: absolute;
             z-index: 5;
@@ -28,7 +32,7 @@
             content: "";
 
             position: absolute;
-            bottom: -25px;
+            bottom: -50px;
             left: 50%;
             transform: translateX(-50%);
 
@@ -62,6 +66,10 @@
     &__content {
         position: relative;
         margin-bottom: 60px;
+
+        .swiper {
+            overflow: hidden;
+        }
     }
 
     &__main {
@@ -138,16 +146,85 @@
         flex-direction: column;
         align-items: center;
     }
+
+    @include ms(lg) {
+        &__lead {
+            font-size: 22px;
+        }
+    }
+
+    @include ms(md) {
+        &__info {
+            padding-top: 24px;
+        }
+
+        &__title {
+            padding: 10px 12px;
+            font-size: 12px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+
+        &__header {
+            margin-bottom: 40px;
+        }
+
+        &__lead {
+            font-size: 18px;
+        }
+    }
+
+    @include ms(sm) {
+        .swiper {
+            width: calc(100% + 32px);
+            margin: 0 -16px;
+            padding: 0;
+            padding-left: 16px;
+        }
+
+        &__content {
+            margin-bottom: 32px;
+        }
+
+        &--secondary {
+            &::after {
+                bottom: -58px;
+                width: 211px;
+                height: 212px;
+            }
+        }
+
+        &__header {
+            margin-bottom: 32px;
+        }
+
+        &__lead {
+            font-size: 16px;
+        }
+    }
 }
 
 .section {
-    &--slider {
+    &.section--slider {
+        overflow: hidden;
         padding-bottom: 50px;
 
         .section {
             &__wrapper {
                 max-width: 1430px;
             }
+        }
+
+        @include ms(lg) {
+            &.wave-top {
+                padding-top: 100px;
+            }
+        }
+
+        @include ms(sm) {
+            padding-bottom: 32px;
         }
     }
 }
