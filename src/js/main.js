@@ -25,7 +25,10 @@ window.$ = window.jQuery = $;
 $(function () {
     new Preload('[data-preload]');
 
-    new Fancybox('[data-fancybox]');
+    const fancybox = new Fancybox('[data-fancybox]');
+
+    $.fn.modal = fancybox.open;
+    $.fn.modalClose = fancybox.close;
 
     new LazyLoad('[data-src], [data-background-image]');
 
